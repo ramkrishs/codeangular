@@ -1,11 +1,21 @@
 <!doctype html>
-<html ng-app>
+<html >
   <head>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.16/angular.min.js"></script>
+    <script data-require="angular.js@*" data-semver="1.4.1" src="https://code.angularjs.org/1.4.1/angular.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
   </head>
-  <body>
-    <div>
-      <div>{{22/7}}</div>
+  <body >
+    <div ng-app="sampleApp">
+      	<div ng-controller = "mainController">
+      		<div>
+      		<label>Full Name: {{user.name}}</label> <br>
+      		<label>User login: {{user.login}}</label>
+      		</div>
+      		<div>
+      		<img ng-src={{user.avatar_url}} title={{user.name}} alt="profile_img">
+			</div>
+      	</div>
     </div>
   </body>
 </html>
